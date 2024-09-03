@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        #projects img, #resume img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        #blog {
+            display: flex;
+            flex-direction: column;
+        }
+        #blog article {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #444;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        #contact label, #contact input, #contact textarea {
+            margin-bottom: 10px;
+        }
+        #contact input, #contact textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #contact button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mohd Danish</h1>
+        <p>Welcome to my portfolio and blog!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Brief introduction about yourself. You can include your background, skills, and interests here.</p>
+    </section>
+
+    <section id"projects">
+        <h2>Projects</h2>
+        <p>Details about your past and current projects. You can include images, descriptions, and links.</p>
+        <img src="project-image.jpg" alt="Project Image">
+    </section>
+    <section id="resume=">
+        <h2>Resume</h2>
+        <p>Link to download your resume or display an embedded version here.</p>
+        <img src="resume-image.jpg" alt="Resume Image">
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <article>
+            <h3>Blog Post Title</h3>
+            <p>Excerpt of your blog post. <a href="#">Read more</a></p>
+        </article>
+        <article>
+            <h3>Another Blog Post</h3>
+            <p>Excerpt of your blog post. <a href="#">Read more</a></p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Skills.</p>
+    </footer>
+
+    <script>
+        document.querySelector('nav a[href^="#"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('#contact form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent!');
+        });
+    </script>
+
+</body>
+</html>
